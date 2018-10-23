@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="939cd0d9-125b-493a-8a98-2b3173c11a5b" name="Default" comment="" />
+    <list default="true" id="939cd0d9-125b-493a-8a98-2b3173c11a5b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/R00147327 - Rainfall Project.py" beforeDir="false" afterPath="$PROJECT_DIR$/R00147327 - Rainfall Project.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/R00147327___Project$R00147327___Rainfall_Project.coverage" NAME="R00147327 - Rainfall Project Coverage Results" MODIFIED="1540288265675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/R00147327___Project$R00147327___Rainfall_Project.coverage" NAME="R00147327 - Rainfall Project Coverage Results" MODIFIED="1540293867799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1701199361">
@@ -17,17 +19,18 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.26" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3714" />
+          <entry key="py" value="5522" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3714" />
+          <entry key="Python" value="5522" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -47,13 +50,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/R00147327 - Rainfall Project.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="132" column="87" selection-start-line="132" selection-start-column="87" selection-end-line="132" selection-end-column="87" />
+            <state relative-caret-position="137">
+              <caret line="192" column="82" selection-start-line="192" selection-start-column="82" selection-end-line="192" selection-end-column="82" />
               <folding>
-                <marker date="1540288559868" expanded="true" signature="1081:1302" ph="..." />
-                <marker date="1540288559868" expanded="true" signature="1465:1717" ph="..." />
-                <marker date="1540288559868" expanded="true" signature="1878:2120" ph="..." />
-                <marker date="1540288559868" expanded="true" signature="3856:3947" ph="..." />
+                <marker date="1540294442996" expanded="true" signature="1367:1588" ph="..." />
+                <marker date="1540294442996" expanded="true" signature="1862:2114" ph="..." />
+                <marker date="1540294442996" expanded="true" signature="2438:2680" ph="..." />
+                <marker date="1540294442996" expanded="true" signature="4662:4923" ph="..." />
+                <marker date="1540294442996" expanded="true" signature="5029:5034" ph="..." />
+                <marker date="1540294442996" expanded="true" signature="5029:5704" ph="..." />
               </folding>
             </state>
           </provider>
@@ -72,6 +77,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -92,12 +100,12 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,6 +117,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -179,10 +188,9 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
@@ -195,6 +203,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.3295082" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -227,13 +236,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/R00147327 - Rainfall Project.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="132" column="87" selection-start-line="132" selection-start-column="87" selection-end-line="132" selection-end-column="87" />
+        <state relative-caret-position="137">
+          <caret line="192" column="82" selection-start-line="192" selection-start-column="82" selection-end-line="192" selection-end-column="82" />
           <folding>
-            <marker date="1540288559868" expanded="true" signature="1081:1302" ph="..." />
-            <marker date="1540288559868" expanded="true" signature="1465:1717" ph="..." />
-            <marker date="1540288559868" expanded="true" signature="1878:2120" ph="..." />
-            <marker date="1540288559868" expanded="true" signature="3856:3947" ph="..." />
+            <marker date="1540294442996" expanded="true" signature="1367:1588" ph="..." />
+            <marker date="1540294442996" expanded="true" signature="1862:2114" ph="..." />
+            <marker date="1540294442996" expanded="true" signature="2438:2680" ph="..." />
+            <marker date="1540294442996" expanded="true" signature="4662:4923" ph="..." />
+            <marker date="1540294442996" expanded="true" signature="5029:5034" ph="..." />
+            <marker date="1540294442996" expanded="true" signature="5029:5704" ph="..." />
           </folding>
         </state>
       </provider>

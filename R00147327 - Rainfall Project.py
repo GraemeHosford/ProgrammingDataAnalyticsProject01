@@ -6,6 +6,8 @@ import numpy as np
 
 
 def show_menu():
+    """This method shows the menu to the user and asks for their choice on what to run"""
+
     print("Menu")
     print("1. Basic Statistics for Total Rainfall (Millimetres)")
     print("2. Basic Statistics for Most Rainfall in a Day (Millimetres)")
@@ -20,6 +22,8 @@ def show_menu():
 
 
 def show_cities():
+    """This method displays the list of cities and asks for the users choice on what one to view info on"""
+
     print("1. Cork")
     print("2. Belfast")
     print("3. Dublin")
@@ -45,6 +49,8 @@ def show_cities():
 
 
 def show_basic_city_stats(city, filename):
+    """This method shows thee basic stats of the cities for the first menu option"""
+
     file = np.genfromtxt(filename, dtype=float, delimiter=" ")
 
     rain_array = file[:, 2]
@@ -54,6 +60,7 @@ def show_basic_city_stats(city, filename):
 
 
 def show_stats_for_total_rainfall():
+    """Menu Option 1: Asks for the users choice of city before passing their choice to show the basic stats"""
     city = show_cities()
     show_basic_city_stats(city, city + "Rainfall.txt")
 
@@ -68,11 +75,14 @@ def show_rain_per_day_stats(city, filename):
 
 
 def show_rainfall_in_a_day_stats():
+    """Menu Option 2: Asks for choice of city then displays the rainfall info by calling show_rain_days_stats"""
+
     city = show_cities()
     show_rain_per_day_stats(city, city + "Rainfall.txt")
 
 
 def show_rain_days_stats(city, filename):
+    """Shows the stats for the rain days info"""
     file = np.genfromtxt(filename, dtype=float, delimiter=" ")
 
     rain_days_array = file[:, 4]
@@ -82,11 +92,15 @@ def show_rain_days_stats(city, filename):
 
 
 def show_rain_days():
+    """Menu Option 3: Gets city then shows the rain days info"""
+
     city = show_cities()
     show_rain_days_stats(city, city + "Rainfall.txt")
 
 
 def show_wettest_location():
+    """Menu Option 4: Shows the wettest location out of all the cities"""
+
     cork_file = np.genfromtxt("CorkRainfall.txt", dtype=float, delimiter=" ")
     belfast_file = np.genfromtxt("BelfastRainfall.txt", dtype=float, delimiter=" ")
     dublin_file = np.genfromtxt("DublinRainfall.txt", dtype=float, delimiter=" ")
@@ -129,11 +143,54 @@ def show_wettest_location():
     print("The wettest location in Ireland is", wettest_city, "with a rainfall figure of", max_value, "mm")
 
 
+def get_city_percent(city, number):
+    """Returns the percentage of rain days for a given city and under or equal to  a given number"""
+
+    file = np.genfromtxt(city + "Rainfall.txt", dtype=float, delimiter=" ")
+
+    array = file[:, 4]
+
+    num_rows = 0
+
+    for row in array:
+        if row <= number:
+            num_rows += 1
+
+    percent = (num_rows / len(array)) * 100
+
+    return percent
+
+
 def show_percentage_rain_days():
+    """Menu Option 5: Shows the percentage of raind ays for each city"""
+
     number = int(input("Please enter maximum threshold value for number of rain days"))
+
+    print("The following are the percentage of rain days less than or equal to", number)
+
+    cork_value = get_city_percent("Cork", number)
+
+    print("1. Cork", cork_value, "%")
+
+    belfast_value = get_city_percent("Belfast", number)
+
+    print("2. Belfast", belfast_value, "%")
+
+    dublin_value = get_city_percent("Dublin", number)
+
+    print("3. Dublin", dublin_value, "%")
+
+    galway_value = get_city_percent("Galway", number)
+
+    print("4. Galway", galway_value, "%")
+
+    limerick_value = get_city_percent("Limerick", number)
+
+    print("5. Limerick", limerick_value, "%")
 
 
 def main():
+    """Shows the menu to the user and runs the correct method based on their input"""
 
     menu_choice = -1
 
