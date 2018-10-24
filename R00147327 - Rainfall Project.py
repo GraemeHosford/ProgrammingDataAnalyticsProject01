@@ -5,6 +5,40 @@
 import numpy as np
 
 
+def get_int_in_range(prompt, min_value, max_value):
+    """Validates user input so they may only enter ints in the specified range"""
+
+    while True:
+        try:
+            user_in = int(input(prompt))
+
+            if user_in < min_value or user_in > max_value:
+                print("Enter a number in the range", min_value, "and", max_value)
+                continue
+
+            return user_in
+        except ValueError:
+            print("Enter a number in the range", min_value, "and", max_value)
+            continue
+
+
+def get_non_negative_int_input(prompt):
+    """Asks for input and ensures the int entered is not negative"""
+
+    while True:
+        try:
+            user_in = int(input(prompt))
+
+            if user_in < 0:
+                print("Please enter a non-negative value")
+                continue
+
+            return user_in
+        except ValueError:
+            print("Enter a number which is greater than zero")
+            continue
+
+
 def show_menu():
     """This method shows the menu to the user and asks for their choice on what to run"""
 
@@ -16,7 +50,9 @@ def show_menu():
     print("5. Percentage of Rain Days")
     print("6. Exit")
 
-    menu_option = int(input("Please select one of the above options: "))
+    print()
+
+    menu_option = get_int_in_range("Please select one of the above options: ", 1, 6)
 
     return menu_option
 
@@ -24,13 +60,17 @@ def show_menu():
 def show_cities():
     """This method displays the list of cities and asks for the users choice on what one to view info on"""
 
-    print("1. Cork")
-    print("2. Belfast")
-    print("3. Dublin")
-    print("4. Galway")
-    print("5. Limerick")
+    print("\t1. Cork")
+    print("\t2. Belfast")
+    print("\t3. Dublin")
+    print("\t4. Galway")
+    print("\t5. Limerick")
 
-    city_picked = int(input("Please select a location: "))
+    print()
+
+    city_picked = get_int_in_range("Please select a location: ", 1, 5)
+
+    print()
 
     city = ""
 
@@ -58,6 +98,8 @@ def show_basic_city_stats(city, filename):
     print(city, "Max Total Rainfall =", np.max(rain_array))
     print(city, "Average Total Rainfall =", np.mean(rain_array))
 
+    print()
+
 
 def show_stats_for_total_rainfall():
     """Menu Option 1: Asks for the users choice of city before passing their choice to show the basic stats"""
@@ -72,6 +114,8 @@ def show_rain_per_day_stats(city, filename):
 
     print(city, "Max Most rainfall in a Day", np.max(rain_per_day_array))
     print(city, "Average Rainfall in a Day", np.mean(rain_per_day_array))
+
+    print()
 
 
 def show_rainfall_in_a_day_stats():
@@ -89,6 +133,8 @@ def show_rain_days_stats(city, filename):
 
     print(city, "Max Number of Rain Days", np.max(rain_days_array))
     print(city, "Average Number of rain Days", np.mean(rain_days_array))
+
+    print()
 
 
 def show_rain_days():
@@ -134,13 +180,19 @@ def show_wettest_location():
     else:
         wettest_city = "Limerick"
 
+    print()
+
     print("1. Cork", cork_value, "mm")
     print("2. Belfast", belfast_value, "mm")
     print("3. Dublin", dublin_value, "mm")
     print("4. Galway", galway_value, "mm")
     print("5. Limerick", limerick_value, "mm")
 
+    print()
+
     print("The wettest location in Ireland is", wettest_city, "with a rainfall figure of", max_value, "mm")
+
+    print()
 
 
 def get_city_percent(city, number):
@@ -158,31 +210,25 @@ def get_city_percent(city, number):
 
 
 def show_percentage_rain_days():
-    """Menu Option 5: Shows the percentage of raind ays for each city"""
+    """Menu Option 5: Shows the percentage of rain days for each city"""
 
-    number = int(input("Please enter maximum threshold value for number of rain days"))
+    number = get_non_negative_int_input("Please enter maximum threshold value for number of rain days")
 
     print("The following are the percentage of rain days less than or equal to", number)
 
     cork_value = get_city_percent("Cork", number)
-
-    print("1. Cork", cork_value, "%")
-
     belfast_value = get_city_percent("Belfast", number)
-
-    print("2. Belfast", belfast_value, "%")
-
     dublin_value = get_city_percent("Dublin", number)
-
-    print("3. Dublin", dublin_value, "%")
-
     galway_value = get_city_percent("Galway", number)
-
-    print("4. Galway", galway_value, "%")
-
     limerick_value = get_city_percent("Limerick", number)
 
+    print("1. Cork", cork_value, "%")
+    print("2. Belfast", belfast_value, "%")
+    print("3. Dublin", dublin_value, "%")
+    print("4. Galway", galway_value, "%")
     print("5. Limerick", limerick_value, "%")
+
+    print()
 
 
 def main():
