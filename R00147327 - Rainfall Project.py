@@ -144,19 +144,15 @@ def show_wettest_location():
 
 
 def get_city_percent(city, number):
-    """Returns the percentage of rain days for a given city and under or equal to  a given number"""
+    """Returns the percentage of rain days for a given city and under or equal to a given number"""
 
     file = np.genfromtxt(city + "Rainfall.txt", dtype=float, delimiter=" ")
 
     array = file[:, 4]
 
-    num_rows = 0
+    result = array <= number
 
-    for row in array:
-        if row <= number:
-            num_rows += 1
-
-    percent = (num_rows / len(array)) * 100
+    percent = (len(array[result]) / len(array)) * 100
 
     return percent
 
